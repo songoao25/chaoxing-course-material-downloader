@@ -1,6 +1,6 @@
 # GitHub Repository Standard
 
-This is the reusable repository preparation template for `songoao25` projects.
+This is the reusable repository preparation template for `SONGOAO25` projects.
 Use it before the first public push and before every release-oriented push.
 
 ## Repository metadata

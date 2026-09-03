@@ -2,10 +2,10 @@
 
 [English](README.md) · **简体中文**
 
-[![CI](https://github.com/songoao25/chaoxing-course-material-downloader/actions/workflows/test.yml/badge.svg)](https://github.com/songoao25/chaoxing-course-material-downloader/actions/workflows/test.yml)
-[![Release](https://img.shields.io/github/v/release/songoao25/chaoxing-course-material-downloader?include_prereleases)](https://github.com/songoao25/chaoxing-course-material-downloader/releases)
-[![Last commit](https://img.shields.io/github/last-commit/songoao25/chaoxing-course-material-downloader)](https://github.com/songoao25/chaoxing-course-material-downloader/commits/main)
-[![许可证](https://img.shields.io/github/license/songoao25/chaoxing-course-material-downloader)](LICENSE)
+[![CI](https://github.com/SONGOAO25/chaoxing-course-material-downloader/actions/workflows/test.yml/badge.svg)](https://github.com/SONGOAO25/chaoxing-course-material-downloader/actions/workflows/test.yml)
+[![Release](https://img.shields.io/github/v/release/SONGOAO25/chaoxing-course-material-downloader?include_prereleases)](https://github.com/SONGOAO25/chaoxing-course-material-downloader/releases)
+[![Last commit](https://img.shields.io/github/last-commit/SONGOAO25/chaoxing-course-material-downloader)](https://github.com/SONGOAO25/chaoxing-course-material-downloader/commits/main)
+[![许可证](https://img.shields.io/github/license/SONGOAO25/chaoxing-course-material-downloader)](LICENSE)
 
 一个本地优先的浏览器扩展：用户在学习通登录并打开课程后，程序扫描“资料”栏目和“章节”中的可下载附件，用户选择目录或文件后逐个下载，并保留课程目录结构。
 
@@ -24,7 +24,7 @@
 
 ## 非技术人员最快部署
 
-从 [GitHub Releases](https://github.com/songoao25/chaoxing-course-material-downloader/releases) 下载 Chrome、Edge 或 Firefox 包，按照[简化部署说明](docs/nontechnical-deployment.md)操作，不需要 Node.js。
+从 [GitHub Releases](https://github.com/SONGOAO25/chaoxing-course-material-downloader/releases) 下载 Chrome、Edge 或 Firefox 包，按照[简化部署说明](docs/nontechnical-deployment.md)操作，不需要 Node.js。
 
 由于浏览器不允许免商店扩展静默安装，扩展管理页面仍需要用户确认一次“加载扩展”。这是非商店部署中无法自动消除的唯一确认步骤。
 
@@ -104,4 +104,4 @@ node scripts/install.mjs --browser=auto --json --open
 
 ## 许可证
 
-MIT © songoao25，详见 [LICENSE](LICENSE)。
+MIT © SONGOAO25，详见 [LICENSE](LICENSE)。
