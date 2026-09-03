@@ -81,6 +81,8 @@ npm run build
 
 程序不会上传课程资料，不会读取或导出 Cookie，也不会处理验证码绕过、权限绕过、DRM 解密或没有直接下载地址的受保护内容。请只下载你有权访问和使用的资料，并遵守学校、教师和平台的规定。
 
+完整隐私说明见 [PRIVACY.md](PRIVACY.md)，商店提交资料草案见 [docs/store-listing.md](docs/store-listing.md)。
+
 ## 故障排查
 
 - **提示无法扫描**：确认当前标签页是学习通课程页面，并刷新页面后重试。
@@ -96,6 +98,7 @@ npm run build
 ```sh
 npm test       # Node 内置测试：路径安全、下载队列、目录树
 npm run build  # 生成 Firefox、Chrome、Edge、Safari 资源
+npm run package:stores  # 生成商店提交包；这是扩展包，不是课程资料 ZIP
 ```
 
 架构分为四层：
@@ -106,6 +109,8 @@ npm run build  # 生成 Firefox、Chrome、Edge、Safari 资源
 4. `src/background.js`：浏览器下载 API 适配和后台任务管理。
 
 真实登录态测试不使用提交到仓库的课程数据；请在本机浏览器中完成验收。
+
+商店提交前请按 [发布清单](docs/release-checklist.md) 检查，并使用 [商店资料草案](docs/store-listing.md) 填写对应后台。
 
 ## 参考项目
 
