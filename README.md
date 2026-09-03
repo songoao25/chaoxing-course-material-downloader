@@ -8,6 +8,10 @@
 
 > 项目状态：Alpha。当前优先提供 Firefox、Chrome、Edge 的免商店部署；Safari 暂缓。扫描接口和页面结构仍需根据不同学校部署进行真实浏览器验收。
 
+## 最简单的部署方式
+
+普通用户直接从 [GitHub Releases](https://github.com/songoao25/chaoxing-course-material-downloader/releases) 下载 Chrome、Edge 或 Firefox 包，解压后按 [非技术人员部署说明](docs/nontechnical-deployment.md) 加载一次扩展即可。Agent 或开发者可运行 `node scripts/install.mjs --browser=auto --json --open` 自动检测浏览器并打开正确的扩展管理页面。
+
 ## 功能
 
 - 扫描“资料”栏目及其嵌套文件夹
