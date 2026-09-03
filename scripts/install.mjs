@@ -10,9 +10,9 @@ const json = args.has("--json");
 const open = args.has("--open");
 
 const candidates = {
-  chrome: { page: "chrome://extensions", dirs: ["/Applications/Google Chrome.app", "C:/Program Files/Google/Chrome/Application/chrome.exe"] },
-  edge: { page: "edge://extensions", dirs: ["/Applications/Microsoft Edge.app", "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe"] },
-  firefox: { page: "about:debugging#/runtime/this-firefox", dirs: ["/Applications/Firefox.app", "C:/Program Files/Mozilla Firefox/firefox.exe"] }
+  chrome: { page: "chrome://extensions", dirs: ["/Applications/Google Chrome.app", "/usr/bin/google-chrome", "/usr/bin/google-chrome-stable", "C:/Program Files/Google/Chrome/Application/chrome.exe", `${process.env.LOCALAPPDATA || ""}/Google/Chrome/Application/chrome.exe`] },
+  edge: { page: "edge://extensions", dirs: ["/Applications/Microsoft Edge.app", "/usr/bin/microsoft-edge", "/usr/bin/microsoft-edge-stable", "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe", `${process.env.LOCALAPPDATA || ""}/Microsoft/Edge/Application/msedge.exe`] },
+  firefox: { page: "about:debugging#/runtime/this-firefox", dirs: ["/Applications/Firefox.app", "/usr/bin/firefox", "C:/Program Files/Mozilla Firefox/firefox.exe", `${process.env.LOCALAPPDATA || ""}/Mozilla Firefox/firefox.exe`] }
 };
 
 async function exists(path) { try { await access(path); return true; } catch { return false; } }

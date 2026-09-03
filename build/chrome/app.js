@@ -49,9 +49,10 @@ $("select-all").addEventListener("click", () => { allFiles().forEach((file) => s
 $("clear-all").addEventListener("click", () => { state.selected.clear(); render(); });
 $("download").addEventListener("click", async () => {
   const tasks = allFiles().filter((file) => state.selected.has(file.id)).map((file) => ({ resourceId: file.id, url: file.downloadUrl, filename: file.path || safeRelativePath([state.result.course.name, file.source === "materials" ? "资料" : "章节", file.name]), status: "pending" }));
+  state.tasks.clear();
   const { taskId } = await browserApi.runtime.sendMessage({ type: "download-selected", tasks });
   tasks.forEach((task) => state.tasks.set(task.resourceId, task)); $("status").textContent = `已提交 ${tasks.length} 个下载任务`; $("pause").disabled = false; $("cancel").disabled = false;
-  browserApi.runtime.onMessage.addListener((message) => { if (message.type === "download-progress" && message.taskId === taskId) { state.tasks.set(message.task.resourceId, message.task); const done = [...state.tasks.values()].filter((task) => taskId === taskId && ["success", "failed", "skipped"].includes(task.status)).length; $("status").textContent = `下载进度：${done}/${tasks.length}`; } });
+  browserApi.runtime.onMessage.addListener((message) => { if (message.type === "download-progress" && message.taskId === taskId) { state.tasks.set(message.task.resourceId, message.task); const done = [...state.tasks.values()].filter((task) => ["success", "failed", "skipped"].includes(task.status)).length; const failed = [...state.tasks.values()].filter((task) => task.status === "failed").length; $("status").textContent = `下载进度：${done}/${tasks.length}${failed ? `，失败 ${failed} 个` : ""}`; } });
   $("pause").onclick = () => { browserApi.runtime.sendMessage({ type: "pause-download", taskId }); $("status").textContent = "下载已暂停"; };
   $("cancel").onclick = () => { browserApi.runtime.sendMessage({ type: "cancel-download", taskId }); $("status").textContent = "正在取消下载"; };
 });
