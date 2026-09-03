@@ -6,7 +6,7 @@
 
 一个不需要本地引擎的跨浏览器 WebExtension：在用户已登录学习通的前提下，扫描课程“资料”栏目和“章节”中的可下载附件，按原目录逐个下载。
 
-> 项目状态：Alpha。扫描接口和页面结构仍需根据不同学校部署进行真实浏览器验收。
+> 项目状态：Alpha。当前优先提供 Firefox、Chrome、Edge 的免商店部署；Safari 暂缓。扫描接口和页面结构仍需根据不同学校部署进行真实浏览器验收。
 
 ## 功能
 
@@ -50,6 +50,8 @@ npm run build
 - Chrome：打开 `chrome://extensions`，开启“开发者模式”，选择“加载已解压的扩展程序”，选择 `build/chrome`。
 - Edge：打开 `edge://extensions`，开启“开发人员模式”，选择“加载解压缩的扩展”，选择 `build/edge`。
 - Safari：在 Xcode 中创建 Safari Web Extension App，将 `build/safari` 作为扩展资源导入；详见 [Safari 说明](build/safari/SAFARI.md)。
+
+第一阶段免商店部署的简化说明见 [simple-deployment.md](docs/simple-deployment.md)。
 
 ### 3. 下载课程资料
 
@@ -99,6 +101,7 @@ npm run build
 npm test       # Node 内置测试：路径安全、下载队列、目录树
 npm run build  # 生成 Firefox、Chrome、Edge、Safari 资源
 npm run package:stores  # 生成商店提交包；这是扩展包，不是课程资料 ZIP
+npm run package:simple  # 生成 Chrome、Edge、Firefox 免商店部署包
 ```
 
 架构分为四层：
