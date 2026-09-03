@@ -82,16 +82,17 @@ Safari 资源仍保留在仓库中，用于后续封装；当前简易部署版�
 ```sh
 npm test
 npm run build
+npm run audit:repo
 npm run package:simple
 node scripts/install.mjs --browser=auto --json --open
 ```
 
-机器可读的 Agent 部署契约见 [AGENTS.md](AGENTS.md)，审计结果和已知缺口见 [docs/audit-2026-09-03.md](docs/audit-2026-09-03.md)，发布前请按 [发布检查清单](docs/release-checklist.md)执行。
+机器可读的 Agent 部署契约见 [AGENTS.md](AGENTS.md)，可复用的 GitHub 仓库规范模板见 [docs/repository-standard.md](docs/repository-standard.md)，审计结果和已知缺口见 [docs/audit-2026-09-03.md](docs/audit-2026-09-03.md)，发布前请按 [发布检查清单](docs/release-checklist.md)执行。
 
 ## 仓库规范
 
 - 使用 Conventional Commits，例如 `feat:`、`fix:`、`docs:`、`test:`、`chore:`。
-- 提交前运行测试和构建。
+- 提交前运行仓库审计、测试、构建和打包检查。
 - 不提交 Cookie、凭据、课程资料、私有 URL、日志或个人路径。
 - 对外文档面向用户，并明确标注未验证的真实运行行为。
 

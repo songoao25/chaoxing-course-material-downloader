@@ -3,6 +3,7 @@
 **English** | [中文](README.zh-CN.md)
 
 [![CI](https://github.com/songoao25/chaoxing-course-material-downloader/actions/workflows/test.yml/badge.svg)](https://github.com/songoao25/chaoxing-course-material-downloader/actions/workflows/test.yml)
+[![CodeQL](https://github.com/songoao25/chaoxing-course-material-downloader/actions/workflows/codeql.yml/badge.svg)](https://github.com/songoao25/chaoxing-course-material-downloader/actions/workflows/codeql.yml)
 [![Release](https://img.shields.io/github/v/release/songoao25/chaoxing-course-material-downloader?include_prereleases)](https://github.com/songoao25/chaoxing-course-material-downloader/releases)
 [![Last commit](https://img.shields.io/github/last-commit/songoao25/chaoxing-course-material-downloader)](https://github.com/songoao25/chaoxing-course-material-downloader/commits/main)
 [![License](https://img.shields.io/github/license/songoao25/chaoxing-course-material-downloader)](LICENSE)
@@ -82,11 +83,12 @@ Read the full [privacy statement](PRIVACY.md) and [security policy](SECURITY.md)
 ```sh
 npm test
 npm run build
+npm run audit:repo
 npm run package:simple
 node scripts/install.mjs --browser=auto --json --open
 ```
 
-The machine-readable deployment contract is in [AGENTS.md](AGENTS.md). The audit and known gaps are recorded in [docs/audit-2026-09-03.md](docs/audit-2026-09-03.md). Before a release, follow [docs/release-checklist.md](docs/release-checklist.md).
+The machine-readable deployment contract is in [AGENTS.md](AGENTS.md). The reusable GitHub repository standard is in [docs/repository-standard.md](docs/repository-standard.md). The audit and known gaps are recorded in [docs/audit-2026-09-03.md](docs/audit-2026-09-03.md). Before a release, follow [docs/release-checklist.md](docs/release-checklist.md).
 
 ## Repository policy
 
