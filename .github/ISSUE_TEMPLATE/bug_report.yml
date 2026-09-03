@@ -1,0 +1,41 @@
+name: Bug report
+description: 报告可复现的扫描、选择或下载问题
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请不要粘贴 Cookie、课程资料、完整私有 URL 或接口响应。
+  - type: input
+    id: browser
+    attributes:
+      label: 浏览器与版本
+      placeholder: Firefox 128 / Chrome 128 / Edge 128 / Safari 18
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: 操作系统
+      placeholder: macOS 15 / Windows 11 / Ubuntu 24.04
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 重现步骤
+      description: 请描述打开的页面类型、扫描范围和实际结果。
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望结果
+    validations:
+      required: true
+  - type: input
+    id: counts
+    attributes:
+      label: 文件数量
+      placeholder: 扫描到 10 个，实际应有约 30 个
