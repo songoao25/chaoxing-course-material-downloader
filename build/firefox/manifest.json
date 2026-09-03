@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "学习通课程资料批量下载",
+  "version": "0.1.0",
+  "description": "扫描学习通资料栏目和章节附件并批量直接下载。",
+  "action": {
+    "default_title": "学习通资料下载",
+    "default_popup": "app.html"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "permissions": [
+    "downloads",
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://*.chaoxing.com/*",
+    "https://*.chaoxing.com.cn/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.chaoxing.com/*",
+        "https://*.chaoxing.com.cn/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "chaoxing-downloader@example.local",
+      "strict_min_version": "109.0"
+    }
+  }
+}

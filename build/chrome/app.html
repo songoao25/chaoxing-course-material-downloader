@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>学习通资料下载</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+  <main>
+    <header><div><h1>学习通资料下载</h1><p id="course">尚未扫描课程</p></div><button id="scan">扫描当前课程</button></header>
+    <section class="toolbar"><input id="search" placeholder="搜索文件名"><button id="select-all">全选</button><button id="clear-all">清空</button><span id="summary">未扫描</span></section>
+    <section id="tree" class="tree"><p class="muted">请在已登录学习通的课程页面点击扫描。</p></section>
+    <footer><button id="download" disabled>开始下载</button><button id="pause" disabled>暂停</button><button id="cancel" disabled>取消</button><span id="status"></span></footer>
+    <section id="errors" class="errors" hidden></section>
+  </main><script type="module" src="app.js"></script>
+</body></html>

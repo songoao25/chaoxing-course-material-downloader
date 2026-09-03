@@ -1,0 +1,10 @@
+:root { color-scheme: light dark; font: 14px system-ui, sans-serif; }
+body { margin: 0; min-width: 620px; background: Canvas; color: CanvasText; }
+main { padding: 18px; }
+header, footer, .toolbar { display: flex; align-items: center; gap: 10px; }
+header { justify-content: space-between; border-bottom: 1px solid #8884; padding-bottom: 12px; }
+h1 { margin: 0; font-size: 20px; } p { margin: 5px 0; } button { padding: 7px 12px; cursor: pointer; } input { padding: 7px; }
+.toolbar { padding: 12px 0; } .toolbar input { flex: 1; } .tree { min-height: 300px; max-height: 520px; overflow: auto; border: 1px solid #8886; border-radius: 8px; padding: 8px; }
+.node { display: block; padding: 5px 6px; border-radius: 4px; } .node:hover { background: #8882; } .node input { margin-right: 8px; }
+.depth-1 { margin-left: 18px; } .depth-2 { margin-left: 36px; } .depth-3 { margin-left: 54px; } .depth-4 { margin-left: 72px; } small, .muted { opacity: .65; } footer { padding-top: 12px; }
+.errors { margin-top: 10px; color: #b42318; }
