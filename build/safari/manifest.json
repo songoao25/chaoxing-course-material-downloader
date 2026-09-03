@@ -2,10 +2,20 @@
   "manifest_version": 3,
   "name": "学习通课程资料批量下载",
   "version": "0.1.0",
-  "description": "扫描学习通资料栏目和章节附件并批量直接下载。",
+  "description": "扫描学习通资料和章节附件，按原目录逐个直接下载。",
+  "icons": {
+    "16": "icon-16.png",
+    "32": "icon-32.png",
+    "48": "icon-48.png",
+    "128": "icon-128.png"
+  },
   "action": {
     "default_title": "学习通资料下载",
-    "default_popup": "app.html"
+    "default_popup": "app.html",
+    "default_icon": {
+      "16": "icon-16.png",
+      "32": "icon-32.png"
+    }
   },
   "background": {
     "service_worker": "background.js",
