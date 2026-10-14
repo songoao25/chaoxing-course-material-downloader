@@ -2,10 +2,11 @@
 
 **English** | [中文](README.zh-CN.md)
 
-[![CI](https://github.com/songoao25/chaoxing-course-material-downloader/actions/workflows/test.yml/badge.svg)](https://github.com/songoao25/chaoxing-course-material-downloader/actions/workflows/test.yml)
-[![Release](https://img.shields.io/github/v/release/songoao25/chaoxing-course-material-downloader?include_prereleases)](https://github.com/songoao25/chaoxing-course-material-downloader/releases)
-[![Last commit](https://img.shields.io/github/last-commit/songoao25/chaoxing-course-material-downloader)](https://github.com/songoao25/chaoxing-course-material-downloader/commits/main)
-[![License](https://img.shields.io/github/license/songoao25/chaoxing-course-material-downloader)](LICENSE)
+[![CI](https://github.com/SONGOAO25/chaoxing-course-material-downloader/actions/workflows/test.yml/badge.svg)](https://github.com/SONGOAO25/chaoxing-course-material-downloader/actions/workflows/test.yml)
+[![CodeQL](https://github.com/SONGOAO25/chaoxing-course-material-downloader/actions/workflows/codeql.yml/badge.svg)](https://github.com/SONGOAO25/chaoxing-course-material-downloader/actions/workflows/codeql.yml)
+[![Release](https://img.shields.io/github/v/release/SONGOAO25/chaoxing-course-material-downloader?include_prereleases)](https://github.com/SONGOAO25/chaoxing-course-material-downloader/releases)
+[![Last commit](https://img.shields.io/github/last-commit/SONGOAO25/chaoxing-course-material-downloader)](https://github.com/SONGOAO25/chaoxing-course-material-downloader/commits/main)
+[![License](https://img.shields.io/github/license/SONGOAO25/chaoxing-course-material-downloader)](LICENSE)
 
 A local-first WebExtension for downloading files from a logged-in Chaoxing course. It scans the **Materials** area and downloadable attachments in **Chapters**, lets the user select a tree of files, and downloads them one by one while preserving the course structure.
 
@@ -24,7 +25,7 @@ A local-first WebExtension for downloading files from a logged-in Chaoxing cours
 
 ## Quick start for non-technical users
 
-Download the latest [GitHub Release](https://github.com/songoao25/chaoxing-course-material-downloader/releases), choose Chrome, Edge, or Firefox, and follow [the simple deployment guide](docs/nontechnical-deployment.md). No Node.js is required.
+Download the latest [GitHub Release](https://github.com/SONGOAO25/chaoxing-course-material-downloader/releases), choose Chrome, Edge, or Firefox, and follow [the simple deployment guide](docs/nontechnical-deployment.md). No Node.js is required.
 
 Because browsers do not allow silent installation of unpacked extensions, the browser extension page requires one manual confirmation. This is the only installation step that cannot be automated in a non-store deployment.
 
@@ -82,11 +83,12 @@ Read the full [privacy statement](PRIVACY.md) and [security policy](SECURITY.md)
 ```sh
 npm test
 npm run build
+npm run audit:repo
 npm run package:simple
 node scripts/install.mjs --browser=auto --json --open
 ```
 
-The machine-readable deployment contract is in [AGENTS.md](AGENTS.md). The audit and known gaps are recorded in [docs/audit-2026-09-03.md](docs/audit-2026-09-03.md). Before a release, follow [docs/release-checklist.md](docs/release-checklist.md).
+The machine-readable deployment contract is in [AGENTS.md](AGENTS.md). The reusable GitHub repository standard is in [docs/repository-standard.md](docs/repository-standard.md). The audit and known gaps are recorded in [docs/audit-2026-09-03.md](docs/audit-2026-09-03.md). Before a release, follow [docs/release-checklist.md](docs/release-checklist.md).
 
 ## Repository policy
 
@@ -103,4 +105,4 @@ The machine-readable deployment contract is in [AGENTS.md](AGENTS.md). The audit
 
 ## License
 
-MIT © songoao25. See [LICENSE](LICENSE).
+MIT © SONGOAO25. See [LICENSE](LICENSE).

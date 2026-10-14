@@ -2,10 +2,10 @@
 
 [English](README.md) · **简体中文**
 
-[![CI](https://github.com/songoao25/chaoxing-course-material-downloader/actions/workflows/test.yml/badge.svg)](https://github.com/songoao25/chaoxing-course-material-downloader/actions/workflows/test.yml)
-[![Release](https://img.shields.io/github/v/release/songoao25/chaoxing-course-material-downloader?include_prereleases)](https://github.com/songoao25/chaoxing-course-material-downloader/releases)
-[![Last commit](https://img.shields.io/github/last-commit/songoao25/chaoxing-course-material-downloader)](https://github.com/songoao25/chaoxing-course-material-downloader/commits/main)
-[![许可证](https://img.shields.io/github/license/songoao25/chaoxing-course-material-downloader)](LICENSE)
+[![CI](https://github.com/SONGOAO25/chaoxing-course-material-downloader/actions/workflows/test.yml/badge.svg)](https://github.com/SONGOAO25/chaoxing-course-material-downloader/actions/workflows/test.yml)
+[![Release](https://img.shields.io/github/v/release/SONGOAO25/chaoxing-course-material-downloader?include_prereleases)](https://github.com/SONGOAO25/chaoxing-course-material-downloader/releases)
+[![Last commit](https://img.shields.io/github/last-commit/SONGOAO25/chaoxing-course-material-downloader)](https://github.com/SONGOAO25/chaoxing-course-material-downloader/commits/main)
+[![许可证](https://img.shields.io/github/license/SONGOAO25/chaoxing-course-material-downloader)](LICENSE)
 
 一个本地优先的浏览器扩展：用户在学习通登录并打开课程后，程序扫描“资料”栏目和“章节”中的可下载附件，用户选择目录或文件后逐个下载，并保留课程目录结构。
 
@@ -24,7 +24,7 @@
 
 ## 非技术人员最快部署
 
-从 [GitHub Releases](https://github.com/songoao25/chaoxing-course-material-downloader/releases) 下载 Chrome、Edge 或 Firefox 包，按照[简化部署说明](docs/nontechnical-deployment.md)操作，不需要 Node.js。
+从 [GitHub Releases](https://github.com/SONGOAO25/chaoxing-course-material-downloader/releases) 下载 Chrome、Edge 或 Firefox 包，按照[简化部署说明](docs/nontechnical-deployment.md)操作，不需要 Node.js。
 
 由于浏览器不允许免商店扩展静默安装，扩展管理页面仍需要用户确认一次“加载扩展”。这是非商店部署中无法自动消除的唯一确认步骤。
 
@@ -82,16 +82,17 @@ Safari 资源仍保留在仓库中，用于后续封装；当前简易部署版�
 ```sh
 npm test
 npm run build
+npm run audit:repo
 npm run package:simple
 node scripts/install.mjs --browser=auto --json --open
 ```
 
-机器可读的 Agent 部署契约见 [AGENTS.md](AGENTS.md)，审计结果和已知缺口见 [docs/audit-2026-09-03.md](docs/audit-2026-09-03.md)，发布前请按 [发布检查清单](docs/release-checklist.md)执行。
+机器可读的 Agent 部署契约见 [AGENTS.md](AGENTS.md)，可复用的 GitHub 仓库规范模板见 [docs/repository-standard.md](docs/repository-standard.md)，审计结果和已知缺口见 [docs/audit-2026-09-03.md](docs/audit-2026-09-03.md)，发布前请按 [发布检查清单](docs/release-checklist.md)执行。
 
 ## 仓库规范
 
 - 使用 Conventional Commits，例如 `feat:`、`fix:`、`docs:`、`test:`、`chore:`。
-- 提交前运行测试和构建。
+- 提交前运行仓库审计、测试、构建和打包检查。
 - 不提交 Cookie、凭据、课程资料、私有 URL、日志或个人路径。
 - 对外文档面向用户，并明确标注未验证的真实运行行为。
 
@@ -103,4 +104,4 @@ node scripts/install.mjs --browser=auto --json --open
 
 ## 许可证
 
-MIT © songoao25，详见 [LICENSE](LICENSE)。
+MIT © SONGOAO25，详见 [LICENSE](LICENSE)。

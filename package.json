@@ -2,9 +2,13 @@
   "name": "chaoxing-course-material-downloader",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "test": "node --test tests/*.test.mjs",
     "build": "node scripts/build.mjs",
+    "audit:repo": "node scripts/audit-repository.mjs",
     "package:stores": "node scripts/package-stores.mjs",
     "package:simple": "node scripts/package-simple.mjs"
   }

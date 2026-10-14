@@ -28,7 +28,8 @@
 - 对外 README 面向用户，不写内部过程流水账；英文放 `README.md`，简体中文放 `README.zh-CN.md`。
 - 版本使用语义化版本号；Alpha/预发布状态必须明确标注。
 - 源码变更后必须同步构建产物 `build/`。
-- 发布前必须运行 `npm test`、`npm run build`、`npm run package:simple` 和 `git diff --check`。
+- 发布前必须运行 `npm run audit:repo`、`npm test`、`npm run build`、`npm run package:simple` 和 `git diff --check`。
+- GitHub 仓库元数据与推送前检查模板统一参考 `docs/repository-standard.md`。
 - 推送前检查 README、许可证、贡献指南、行为准则、安全策略、Issue/PR 模板、`.gitignore`、Actions、仓库元数据、敏感信息和个人路径。
 - 推送后回读远程 SHA、仓库设置、Release 和 Actions 结果；不能用本地构建代替真实浏览器或生产验收。
 
